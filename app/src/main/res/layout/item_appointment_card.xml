@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/bg_card_appointment">
+
+
+        <TextView
+            android:id="@+id/tv_appointment_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appointment Date"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:fontFamily="@font/inter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <!-- Clock icon and date-time -->
+        <ImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toStartOf="@id/tv_appointment_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_appointment_label"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wed , 23 Nov , 5 – 6 Pm"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter"
+            app:layout_constraintStart_toEndOf="@id/iv_clock"
+            app:layout_constraintTop_toTopOf="@id/iv_clock"
+            android:layout_marginStart="6dp"/>
+
+        <!-- Three dots -->
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_more_vert"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Separator -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Profile image -->
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/profile_pic"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_round_image"
+            android:clipToOutline="true"
+            app:layout_constraintTop_toBottomOf="@id/iv_clock"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mr. Aryan"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter"
+            app:layout_constraintTop_toTopOf="@id/iv_profile"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            android:layout_marginStart="12dp"/>
+
+        <!-- Purpose -->
+        <TextView
+            android:id="@+id/tv_purpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diet Guidance"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:fontFamily="@font/inter"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Chat Icon -->
+        <ImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_chat"
+            android:background="@drawable/bg_chat_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+            android:layout_marginEnd="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

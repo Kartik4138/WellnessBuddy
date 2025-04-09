@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+    <!-- Left colored strip with curved corners -->
+    <item android:width="8dp" android:gravity="left">
+        <shape android:shape="rectangle">
+            <solid android:color="#2979FF"/> <!-- Stroke color -->
+            <corners
+                android:topLeftRadius="16dp"
+                android:bottomLeftRadius="16dp"/>
+        </shape>
+    </item>
+</layer-list>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp"
+    android:paddingEnd="16dp">
+
+    <!-- Timeline vertical line -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#CCCCCC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="18dp"/>
+
+    <!-- Timeline status circle -->
+    <ImageView
+        android:id="@+id/status_dot"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_circle_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Date & Time -->
+    <TextView
+        android:id="@+id/tv_datetime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="21 Nov , 5:30 Pm"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintStart_toEndOf="@id/status_dot"
+        app:layout_constraintTop_toTopOf="@id/status_dot"
+        app:layout_constraintEnd_toStartOf="@id/tv_status"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming"
+        android:textSize="12sp"
+        android:textColor="@color/upcoming"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/tv_datetime"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Aryan"
+        android:textSize="18sp"
+        android:textColor="#666666"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/tv_datetime"
+        app:layout_constraintStart_toEndOf="@id/line"
+        android:layout_marginStart="28dp"/>
+
+    <TextView
+        android:id="@+id/tv_purpose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Diet Guidance"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:fontFamily="@font/inter"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
